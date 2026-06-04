@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects &amp; Case Studies — Swetang Gajjar</title>
+  <meta name="description" content="Explore Swetang Gajjar's technical projects and case studies spanning LLM evaluation, RAG pipelines, secure MCP servers, and C++ edge AI telemetry.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f59e0b' /%3E%3Cstop offset='100%25' stop-color='%233b82f6' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 10L16 4L26 10V22L16 28L6 22V10Z' stroke='url(%23g)' stroke-width='2' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M16 4V16L26 22M16 16L6 22' stroke='url(%23g)' stroke-width='1.5' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23f59e0b' /%3E%3Ccircle cx='16' cy='4' r='2' fill='%233b82f6' /%3E%3Ccircle cx='6' cy='10' r='2' fill='%233b82f6' /%3E%3Ccircle cx='26' cy='10' r='2' fill='%233b82f6' /%3E%3Ccircle cx='6' cy='22' r='2' fill='%233b82f6' /%3E%3Ccircle cx='26' cy='22' r='2' fill='%233b82f6' /%3E%3Ccircle cx='16' cy='28' r='2' fill='%233b82f6' /%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="components.js" defer></script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Custom cursor removed to restore default browser cursor -->
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Noise texture overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Shared Header Navigation -->
+  <header id="global-header"></header>
+
+  <main id="main">
+    <!-- ═══ PAGE HEADER ═══ -->
+    <header class="page-header" id="top">
+      <div class="container">
+        <span class="section-eyebrow">/projects</span>
+        <h1>Projects &amp; Case Studies</h1>
+        <p>A portfolio of production-ready systems, custom evaluation testbeds, and edge AI implementations.</p>
+        <div class="private-repo-notice" style="max-width: 720px; margin-top: 20px;">
+          <span class="notice-icon">🔒</span>
+          <span>
+            <strong>Private Codebase Notice:</strong> Due to proprietary enterprise control software, non-disclosure agreements, and strict defense-client confidentiality (Lockheed Martin, Northrop Grumman, Raytheon), several repositories are hosted privately. Links redirect to my main GitHub profile. To request guest viewer access to specific private repositories, please <a href="contact.html">contact me directly</a>.
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══ MAIN PROJECTS VIEW ═══ -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Category 1: Core AI & Evaluation -->
+        <h2 style="font-size: 28px; margin-bottom: 24px; color: var(--text); letter-spacing: -0.02em; border-bottom: 1px solid var(--border); padding-bottom: 12px;">Core AI &amp; Evaluation Pipelines</h2>
+        
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">1. LLM-as-a-Judge Evaluation Harness</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Designed and deployed an automated LLM evaluation harness for regression testing and model alignment analysis. The harness is integrated into CI/CD pipelines to audit and score model outputs across multiple logic test files on every code commit.
+            </p>
+            <div class="highlight-box">
+              "Most teams treat evals as a one-off task. This framework makes LLM quality assessment an automated, continuous CI/CD gating step."
+            </div>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7;">
+              The engine automatically calculates <strong>Groundedness, Faithfulness, and Instruction Adherence</strong> using structured JSON schemas, outputting formatted regressions directly to developer dashboards and preventing sub-par models from shipping.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">500+</div>
+                  <div class="sidebar-metric-lbl">Daily LLM Outputs Audited</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">3</div>
+                  <div class="sidebar-metric-lbl">Custom Semantic Metrics</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">CI/CD</div>
+                  <div class="sidebar-metric-lbl">GitHub Actions Gated</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>Python</span>
+                <span>GitHub Actions</span>
+                <span>OpenAI API</span>
+                <span>JSON Schema</span>
+                <span>vLLM</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+              <a href="https://www.youtube.com/watch?v=YzLZ1tC7_L4" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm magnetic" style="width: 100%; justify-content: center;">
+                <span>Watch Video Demo</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="btn btn-ghost btn-sm magnetic" style="width: 100%; justify-content: center; color: var(--text-secondary);">
+                <span>Request Access</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">2. Production-Grade Grounded RAG</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Built a containerized RAG pipeline with hybrid dense/sparse vector search, cross-encoder re-ranking, and structured citation verification. Deployed inside Docker to support localized, offline document search.
+            </p>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Designed semantic chunking strategies combined with BM25 keyword matching and dense bi-encoders, yielding a 35% boost in document retrieval recall. The pipeline uses source context boundaries to audit and prune hallucinated text.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">98%</div>
+                  <div class="sidebar-metric-lbl">Hallucination Reduction</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">35%</div>
+                  <div class="sidebar-metric-lbl">Retrieval Recall Boost</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Offline</div>
+                  <div class="sidebar-metric-lbl">100% Local Containerized</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Docker</span>
+                <span>Qdrant</span>
+                <span>SentenceTransformers</span>
+              </div>
+            </div>
+            <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="btn btn-ghost magnetic">
+              <span>Request Access</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">3. AI Citation Validation Engine</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Built a high-performance Python-based parsing library to validate citation structures inside AI-generated documents. It scans LLM outputs to flag statements lacking verified source references.
+            </p>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Equipped with strict and warning modes to interface with downstream document workflows, ensuring legal and technical texts maintain 100% compliance with citation source materials.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">100%</div>
+                  <div class="sidebar-metric-lbl">Local Regex Parsing</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">2</div>
+                  <div class="sidebar-metric-lbl">Validation Modes</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>Python</span>
+                <span>Regex</span>
+                <span>Document QA</span>
+              </div>
+            </div>
+            <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="btn btn-ghost magnetic">
+              <span>Request Access</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">4. Multilingual OCR Pipeline</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Developed an automated extraction pipeline for low-resource languages (specifically Gujarati and English). It processes scanned PDF blueprints and documents, extracts multilingual text layers, and performs AI-assisted post-processing.
+            </p>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Integrates custom post-OCR correction layers to identify spelling errors and standardize legal/technical vocabulary terminology.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Bilingual</div>
+                  <div class="sidebar-metric-lbl">Gujarati-English Core</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">AI</div>
+                  <div class="sidebar-metric-lbl">Post-OCR Correction Layer</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>Python</span>
+                <span>Tesseract OCR</span>
+                <span>NLP</span>
+                <span>Pillow</span>
+              </div>
+            </div>
+            <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="btn btn-ghost magnetic">
+              <span>Request Access</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Category 2: Systems & Edge AI -->
+        <h2 style="font-size: 28px; margin-top: 60px; margin-bottom: 24px; color: var(--text); letter-spacing: -0.02em; border-bottom: 1px solid var(--border); padding-bottom: 12px;">Systems &amp; Edge AI Integration</h2>
+
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">5. Secure ITAR File Vault MCP Server</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Designed and built an Model Context Protocol (MCP) server written in TypeScript. This server acts as a secure bridge between local AI agents and restricted file directories containing weapon specs, blueprints, and ITAR compliance materials.
+            </p>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Implements Role-Based Access Control (RBAC) and dynamic text redaction layers that automatically strip out restricted specification strings before sending file contents to LLM contexts, ensuring compliance with MIL-STD-130N auditing.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">MCP</div>
+                  <div class="sidebar-metric-lbl">Model Context Protocol SDK</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">RBAC</div>
+                  <div class="sidebar-metric-lbl">Dynamic Redaction Engine</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>MCP SDK</span>
+                <span>Regex Sanitizer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">6. Edge-AI Telemetry Anomaly Explainer</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Bridges low-level hardware design with generative AI. Built a high-performance system where a C++ simulator streams simulated factory/motor telemetry, an ONNX-runtime model detects anomalies at the edge, and an LLM agent interprets the anomaly to generate a structured maintenance action guide.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Edge</div>
+                  <div class="sidebar-metric-lbl">ONNX-runtime Optimized</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">C++</div>
+                  <div class="sidebar-metric-lbl">Inter-Process Telemetry</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>C++</span>
+                <span>Python</span>
+                <span>ONNX runtime</span>
+                <span>LLM Agent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">7. High Frequency Trading (HFT) Infrastructure</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Designed and simulated low-latency interconnection network architectures and routing algorithms for high-frequency trading applications. Analyzed cache-coherence protocols, packet-queuing delays in OMNeT++, and minimized delay topologies in simulation environments.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">OMNeT++</div>
+                  <div class="sidebar-metric-lbl">Packet Queue Modeling</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Low Latency</div>
+                  <div class="sidebar-metric-lbl">Network Routing Sim</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>C++</span>
+                <span>OMNeT++</span>
+                <span>TCP/IP</span>
+                <span>Routing Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Web & Hackathons -->
+        <h2 style="font-size: 28px; margin-top: 60px; margin-bottom: 24px; color: var(--text); letter-spacing: -0.02em; border-bottom: 1px solid var(--border); padding-bottom: 12px;">Web &amp; Hackathon Projects</h2>
+
+        <!-- Project 8: Third Eye -->
+        <div class="case-study-grid" style="margin-bottom: 80px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">8. THIRD EYE: Unseen Revealed (Gemini 3 Pro Hackathon)</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Developed as a premium AI-powered security auditing and content origin detection system for the Gemini 3 Pro Hackathon. It features automated scanners to discover web vulnerabilities (Security Audit) and advanced semantic analysis logic (Origin Detection) to calculate the probability of synthetic (AI-generated) vs. human content origins.
+            </p>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              The platform outputs automated, structured HTML and PDF audit reports, with visual telemetry dashboards built using Recharts and a custom dark-mode Glassmorphic layout.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">45</div>
+                  <div class="sidebar-metric-lbl">Active Source Files</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Automated</div>
+                  <div class="sidebar-metric-lbl">Vulnerability Audit</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Semantic</div>
+                  <div class="sidebar-metric-lbl">Origin Detection</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>React 18</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Glassmorphism</span>
+                <span>Gemini API</span>
+                <span>Recharts</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+              <a href="https://www.youtube.com/watch?v=veSYGxprbis" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm magnetic" style="width: 100%; justify-content: center;">
+                <span>Watch Video Demo</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a href="https://www.kaggle.com/competitions/gemini-3/writeups/THIRD-EYE" target="_blank" rel="noreferrer" class="btn btn-ghost btn-sm magnetic" style="width: 100%; justify-content: center; color: var(--accent-2);">
+                <span>Kaggle Writeup</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="btn btn-ghost btn-sm magnetic" style="width: 100%; justify-content: center; color: var(--text-secondary);">
+                <span>Request Access</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: INSTABASH -->
+        <div class="case-study-grid" style="margin-bottom: 40px;" data-reveal>
+          <div class="case-study-content">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--text);">9. INSTABASH Web Application</h3>
+            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-top: 12px;">
+              Developed during a collaborative technical hackathon, INSTABASH is a party and social event organizer application. Interfaces with Google and Facebook OAuth APIs to enable real-time location tagging, attendee confirmation lists, and dynamic user feeds.
+            </p>
+          </div>
+          <div class="case-study-sidebar">
+            <div class="sidebar-box">
+              <h4>Project Stats</h4>
+              <div class="sidebar-metric-list">
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">OAuth 2.0</div>
+                  <div class="sidebar-metric-lbl">Social Integrations</div>
+                </div>
+                <div class="sidebar-metric">
+                  <div class="sidebar-metric-val">Responsive</div>
+                  <div class="sidebar-metric-lbl">Mobile-Ready UI</div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-box">
+              <h4>Technology Stack</h4>
+              <div class="tech-tag-list">
+                <span>ASP.NET C#</span>
+                <span>JavaScript</span>
+                <span>SQL Server</span>
+                <span>Google API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Component -->
+  <footer id="global-footer"></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

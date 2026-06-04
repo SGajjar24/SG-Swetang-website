@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Swetang Gajjar</title>
+  <meta name="description" content="Read Swetang Gajjar's academic papers on cache-coherence interconnection networks, low-power VLSI design, and hardware cryptography.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f59e0b' /%3E%3Cstop offset='100%25' stop-color='%233b82f6' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 10L16 4L26 10V22L16 28L6 22V10Z' stroke='url(%23g)' stroke-width='2' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M16 4V16L26 22M16 16L6 22' stroke='url(%23g)' stroke-width='1.5' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23f59e0b' /%3E%3Ccircle cx='16' cy='4' r='2' fill='%233b82f6' /%3E%3Ccircle cx='6' cy='10' r='2' fill='%233b82f6' /%3E%3Ccircle cx='26' cy='10' r='2' fill='%233b82f6' /%3E%3Ccircle cx='6' cy='22' r='2' fill='%233b82f6' /%3E%3Ccircle cx='26' cy='22' r='2' fill='%233b82f6' /%3E%3Ccircle cx='16' cy='28' r='2' fill='%233b82f6' /%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="components.js" defer></script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Custom cursor removed to restore default browser cursor -->
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Noise texture overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Shared Header Navigation -->
+  <header id="global-header"></header>
+
+  <main id="main">
+    <!-- ═══ PAGE HEADER ═══ -->
+    <header class="page-header" id="top">
+      <div class="container">
+        <span class="section-eyebrow">/research</span>
+        <h1>Academic Research</h1>
+        <p>Selected papers and simulator studies from my Master of Science in Computer Engineering at CSU Fullerton.</p>
+        <div class="private-repo-notice" style="max-width: 720px; margin-top: 20px;">
+          <span class="notice-icon">🔒</span>
+          <span>
+            <strong>Academic Access Notice:</strong> Due to academic copyrights, proprietary simulation libraries, and university distribution agreements (CSU Fullerton), the full texts, simulator files, and source code of these research papers are not publicly hosted. To request access to full manuscripts, OMNeT++ configs, or H-Spice code, please <a href="contact.html">contact me directly</a>.
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══ RESEARCH PAPERS LIST ═══ -->
+    <section class="section">
+      <div class="container">
+        
+        <div class="research-list">
+          
+          <!-- Paper 1 -->
+          <article class="research-card" data-reveal>
+            <h3 class="research-title">1. Interconnection Networks and Protocols Used for Cache-Coherence</h3>
+            <div class="research-meta">
+              <span>Author: Swetang Gajjar</span> | 
+              <span>Institution: California State University, Fullerton</span> | 
+              <span>Domain: Computer Architecture</span>
+            </div>
+            <p class="research-abstract">
+              <strong>Abstract:</strong> In multi-core processors sharing memory, write operations can lead to synchronization conflicts and dirty caches across concurrent executing threads. This paper analyzes the cache coherence problem and evaluates Snooping-based, Directory-based, and Distributed Shared Memory protocols. By examining how memory states are updated and duplicated across interconnection topologies, the study models latency optimization, data invalidation overhead, and directory-scale constraints under high processor concurrency.
+            </p>
+            <div class="tech-tag-list">
+              <span>Cache Coherence</span>
+              <span>Directory Protocols</span>
+              <span>Snooping</span>
+              <span>Interconnection Networks</span>
+              <span>Multi-Core Systems</span>
+            </div>
+          </article>
+
+          <!-- Paper 2 -->
+          <article class="research-card" data-reveal>
+            <h3 class="research-title">2. Transition Delay Fault Testing &amp; Low-Power 8-Bit Ripple Carry Adder</h3>
+            <div class="research-meta">
+              <span>Author: Swetang Gajjar</span> | 
+              <span>Institution: California State University, Fullerton</span> | 
+              <span>Domain: VLSI Design &amp; Testability</span>
+            </div>
+            <p class="research-abstract">
+              <strong>Abstract:</strong> At sub-micron semiconductor nodes, transition delay faults represent a major threat to circuit speed and reliability. This paper implements gate-level transition delay fault modeling and power dissipation analysis for an 8-bit Ripple Carry Adder. Utilizing H-Spice simulators at 32nm and 22nm CMOS nodes, the research evaluates delay vs. power trade-offs, sizing delay margins, and ATPG (Automated Test Pattern Generation) fault coverage to isolate transition timing faults.
+            </p>
+            <div class="tech-tag-list">
+              <span>H-Spice</span>
+              <span>32nm/22nm CMOS</span>
+              <span>Transition Delay Faults</span>
+              <span>ATPG Testing</span>
+              <span>Low-Power VLSI</span>
+            </div>
+          </article>
+
+          <!-- Paper 3 -->
+          <article class="research-card" data-reveal>
+            <h3 class="research-title">3. Remote IC Activation &amp; Hardware Cryptography</h3>
+            <div class="research-meta">
+              <span>Author: Swetang Gajjar</span> | 
+              <span>Institution: California State University, Fullerton</span> | 
+              <span>Domain: Hardware Security</span>
+            </div>
+            <p class="research-abstract">
+              <strong>Abstract:</strong> Globalized semiconductor manufacturing exposes supply chains to piracy and cloning risks. This research explores Remote Integrated Circuit Activation models utilizing physical unclonable functions (PUFs) and state-transition locking (Finite State Machine Cryptography). The paper details how remote activation servers can securely authenticate and unlock chips post-fabrication by dynamic state manipulation, preventing hardware counterfeit and intellectual property theft.
+            </p>
+            <div class="tech-tag-list">
+              <span>Hardware Security</span>
+              <span>Physical Unclonable Functions (PUF)</span>
+              <span>FSM Cryptography</span>
+              <span>IC Activation</span>
+              <span>Supply Chain Protection</span>
+            </div>
+          </article>
+
+          <!-- Paper 4 -->
+          <article class="research-card" data-reveal>
+            <h3 class="research-title">4. Packet Queuing Behavior in Networks Using OMNeT++</h3>
+            <div class="research-meta">
+              <span>Author: Swetang Gajjar</span> | 
+              <span>Institution: California State University, Fullerton</span> | 
+              <span>Domain: Computer Networks</span>
+            </div>
+            <p class="research-abstract">
+              <strong>Abstract:</strong> Simulated node delay, queue modeling, and Quality of Service (QoS) in high-throughput data networking topologies. Utilized the OMNeT++ simulation platform to build discrete-event network models, analyzing queue sizes, packet drop rates, and routing efficiency across congested layer-3 routing links.
+            </p>
+            <div class="tech-tag-list">
+              <span>OMNeT++</span>
+              <span>Discrete-Event Simulation</span>
+              <span>QoS Optimization</span>
+              <span>Packet Queuing</span>
+              <span>Network Routing</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Component -->
+  <footer id="global-footer"></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

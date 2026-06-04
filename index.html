@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swetang Gajjar — Applied AI Engineer</title>
+  <meta name="description" content="Applied AI Engineer with 11+ years building production systems — now focused on LLM evaluation, RAG architecture, and AI deployment reliability. M.S. Cal State Fullerton, Ex-Jetec (Lockheed Martin, Raytheon, Northrop Grumman).">
+  <meta name="keywords" content="Applied AI Engineer, LLM Evaluation, RAG, AI Deployment, MLOps, Scale AI, Outlier, Lockheed Martin, Raytheon, Northrop Grumman, Cal State Fullerton">
+  <meta name="author" content="Swetang Gajjar">
+
+  <meta property="og:title" content="Swetang Gajjar — Applied AI Engineer">
+  <meta property="og:description" content="Applied AI Engineer with 11+ years building production systems — now focused on LLM evaluation, RAG architecture, and AI deployment reliability.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://swetang-portfolio.vercel.app">
+  <meta property="og:image" content="https://swetang-portfolio.vercel.app/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swetang Gajjar — Applied AI Engineer">
+  <meta name="twitter:description" content="LLM evaluation, RAG, AI deployment. 11+ years production systems.">
+  <meta name="twitter:image" content="https://swetang-portfolio.vercel.app/og-image.png">
+  <meta name="twitter:site" content="@SGajjar24">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f59e0b' /%3E%3Cstop offset='100%25' stop-color='%233b82f6' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 10L16 4L26 10V22L16 28L6 22V10Z' stroke='url(%23g)' stroke-width='2' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M16 4V16L26 22M16 16L6 22' stroke='url(%23g)' stroke-width='1.5' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23f59e0b' /%3E%3Ccircle cx='16' cy='4' r='2' fill='%233b82f6' /%3E%3Ccircle cx='6' cy='10' r='2' fill='%233b82f6' /%3E%3Ccircle cx='26' cy='10' r='2' fill='%233b82f6' /%3E%3Ccircle cx='6' cy='22' r='2' fill='%233b82f6' /%3E%3Ccircle cx='26' cy='22' r='2' fill='%233b82f6' /%3E%3Ccircle cx='16' cy='28' r='2' fill='%233b82f6' /%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Shared Components and Core Logic scripts -->
+  <script src="components.js" defer></script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Custom cursor removed to restore default browser cursor -->
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Noise texture overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+
+
+  <!-- Shared Header Navigation -->
+  <header id="global-header"></header>
+
+  <main id="main">
+    <!-- ═══ HERO SECTION ═══ -->
+    <section class="hero" id="top">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text column -->
+          <div class="hero-text-content">
+            <div class="hero-badge magnetic" data-reveal>
+              <span class="pulse-dot"></span>
+              <span>Open to global opportunities</span>
+              <span class="badge-divider">·</span>
+              <span>US · Canada · EU · UK · AU</span>
+            </div>
+
+            <h1 class="hero-title" data-reveal data-reveal-delay="100">
+              <span class="hero-line">Building AI systems</span>
+              <span class="hero-line">that have to <span class="underline-anim">work</span>.</span>
+            </h1>
+
+            <p class="hero-subtitle" data-reveal data-reveal-delay="200">
+              I'm <strong>Swetang Gajjar</strong> — an Applied AI Engineer with 11+ years of
+              systems reliability and software engineering experience. I build, evaluate, and ship production-grade <em>LLM evaluation frameworks</em>, <em>RAG architectures</em>, and <em>MLOps pipelines</em>.
+            </p>
+
+            <div class="hero-actions" data-reveal data-reveal-delay="300">
+              <a href="projects.html" class="btn btn-primary magnetic">
+                <span>View all projects</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="btn btn-ghost magnetic">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/gajjarswetang" target="_blank" rel="noreferrer" class="btn btn-ghost magnetic">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Image column -->
+          <div class="hero-image-content" data-reveal data-reveal-delay="250">
+            <div class="hero-profile-wrap">
+              <img src="assets/profile.jpg" alt="Swetang Gajjar Profile" class="hero-profile-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Stats Row -->
+        <div class="hero-stats" data-reveal data-reveal-delay="400">
+          <div class="stat">
+            <div class="stat-value" data-counter="11" data-suffix="+">0</div>
+            <div class="stat-label">Years building production systems</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" data-counter="450" data-suffix="+">0</div>
+            <div class="stat-label">Confidential AI evaluation tasks</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" data-counter="98" data-suffix="%">0</div>
+            <div class="stat-label">Hallucination reduction in production RAG</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" data-counter="40" data-suffix="K+">0</div>
+            <div class="stat-label">LOC production C++/C# codebase</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ CREDIBILITY LOGO WALL CAROUSEL ═══ -->
+    <section class="logo-wall" aria-label="Trusted partners and employers">
+      <div class="logo-wall-container">
+        <h2 class="logo-wall-title">DELIVERED PRODUCTION SYSTEMS & AI SOLUTIONS FOR</h2>
+        <div class="logo-marquee-wrapper">
+          <div class="logo-marquee-content">
+            <div class="logo-wall-item" title="Lockheed Martin">
+              <img src="assets/logos/lockheed-martin.svg" class="company-logo" alt="Lockheed Martin Logo">
+            </div>
+            <div class="logo-wall-item" title="Raytheon">
+              <img src="assets/logos/raytheon.svg" class="company-logo" alt="Raytheon Logo">
+            </div>
+            <div class="logo-wall-item" title="Northrop Grumman">
+              <img src="assets/logos/northrop-grumman.svg" class="company-logo" alt="Northrop Grumman Logo">
+            </div>
+            <div class="logo-wall-item" title="Crane Army">
+              <img src="assets/logos/crane-army.svg" class="company-logo" alt="Crane Army Logo">
+            </div>
+            <div class="logo-wall-item" title="Honeywell">
+              <img src="assets/logos/honeywell.svg" class="company-logo" alt="Honeywell Logo">
+            </div>
+            <div class="logo-wall-item" title="Jetec">
+              <img src="assets/logos/jetec.png" class="company-logo" alt="Jetec Logo">
+            </div>
+            <div class="logo-wall-item" title="Scale AI">
+              <img src="assets/logos/scale-ai.svg" class="company-logo" alt="Scale AI Logo">
+            </div>
+            <div class="logo-wall-item" title="Outlier">
+              <img src="assets/logos/outlier.svg" class="company-logo" alt="Outlier Logo">
+            </div>
+          </div>
+          <!-- Duplicate track for seamless infinite marquee effect -->
+          <div class="logo-marquee-content" aria-hidden="true">
+            <div class="logo-wall-item" title="Lockheed Martin">
+              <img src="assets/logos/lockheed-martin.svg" class="company-logo" alt="Lockheed Martin Logo">
+            </div>
+            <div class="logo-wall-item" title="Raytheon">
+              <img src="assets/logos/raytheon.svg" class="company-logo" alt="Raytheon Logo">
+            </div>
+            <div class="logo-wall-item" title="Northrop Grumman">
+              <img src="assets/logos/northrop-grumman.svg" class="company-logo" alt="Northrop Grumman Logo">
+            </div>
+            <div class="logo-wall-item" title="Crane Army">
+              <img src="assets/logos/crane-army.svg" class="company-logo" alt="Crane Army Logo">
+            </div>
+            <div class="logo-wall-item" title="Honeywell">
+              <img src="assets/logos/honeywell.svg" class="company-logo" alt="Honeywell Logo">
+            </div>
+            <div class="logo-wall-item" title="Jetec">
+              <img src="assets/logos/jetec.png" class="company-logo" alt="Jetec Logo">
+            </div>
+            <div class="logo-wall-item" title="Scale AI">
+              <img src="assets/logos/scale-ai.svg" class="company-logo" alt="Scale AI Logo">
+            </div>
+            <div class="logo-wall-item" title="Outlier">
+              <img src="assets/logos/outlier.svg" class="company-logo" alt="Outlier Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MANIFESTO SECTION ═══ -->
+    <section class="manifesto">
+      <div class="container">
+        <div class="manifesto-slider-container" data-reveal>
+          <!-- Slide 1 -->
+          <div class="manifesto-slide active">
+            <div class="manifesto-mark">"</div>
+            <p class="manifesto-text">
+              AI systems don't fail at the model.
+              They fail at the seam between the model and the world.
+              <span class="manifesto-accent">That's where I work.</span>
+            </p>
+            <div class="manifesto-attr">
+              <span class="manifesto-line"></span>
+              <span>A working principle</span>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="manifesto-slide">
+            <div class="manifesto-mark">"</div>
+            <p class="manifesto-text">
+              True engineering is not about building the smartest system, but the most predictable one.
+              <span class="manifesto-accent">Consistency over complexity.</span>
+            </p>
+            <div class="manifesto-attr">
+              <span class="manifesto-line"></span>
+              <span>Systems Engineering Philosophy</span>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="manifesto-slide">
+            <div class="manifesto-mark">"</div>
+            <p class="manifesto-text">
+              An evaluation without rigor is just an opinion. We must measure LLMs with the same precision as industrial firmware.
+              <span class="manifesto-accent">Evaluate, validate, then deploy.</span>
+            </p>
+            <div class="manifesto-attr">
+              <span class="manifesto-line"></span>
+              <span>LLM Evaluation Core Principle</span>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="manifesto-slide">
+            <div class="manifesto-mark">"</div>
+            <p class="manifesto-text">
+              Defense-grade software demands zero critical failures. We carry that same engineering discipline into the unpredictable world of generative AI.
+              <span class="manifesto-accent">Rigor in every line.</span>
+            </p>
+            <div class="manifesto-attr">
+              <span class="manifesto-line"></span>
+              <span>Reliability Philosophy</span>
+            </div>
+          </div>
+        </div>
+        <!-- Slider Dots Indicators -->
+        <div class="slider-dots" data-reveal>
+          <span class="dot active" data-slide="0" aria-label="Go to slide 1"></span>
+          <span class="dot" data-slide="1" aria-label="Go to slide 2"></span>
+          <span class="dot" data-slide="2" aria-label="Go to slide 3"></span>
+          <span class="dot" data-slide="3" aria-label="Go to slide 4"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SHORT ABOUT / 4 PILLARS ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">/01 — What I do</span>
+          <h2 class="section-title">Bridging systems rigor with modern AI</h2>
+          <p class="section-description">I bring engineering discipline to model alignment and AI architecture.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-content" data-reveal>
+            <p class="lead">
+              I evaluate generative AI systems and ship the infrastructure around them.
+            </p>
+            <p>
+              Having pivoted into applied AI after graduating with an M.S. in Computer Engineering from <strong>Cal State Fullerton</strong>, I have completed <strong>450+ technical evaluations</strong> of AI outputs across Python, C++, and JavaScript under confidential contracts. I also build robust, air-gapped RAG pipelines, dynamic citation verification engines, and automated LLM regression harnesses.
+            </p>
+            <p>
+              My engineering rigor comes from a 6+ year career at <strong>Jetec Corporation</strong> in California. There, I maintained a <strong>40K+ LOC C++/C# production codebase</strong> for Fortune 500 defense clients (Lockheed Martin, Northrop Grumman, Raytheon), ensuring zero critical field failures under ITAR and MIL-STD compliance.
+            </p>
+            <a href="about.html" class="btn btn-ghost magnetic" style="margin-top: 16px;">
+              <span>Read my full story</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+
+          <div class="pillar-stack" data-reveal data-reveal-delay="150">
+            <div class="pillar">
+              <div class="pillar-num">01</div>
+              <div class="pillar-body">
+                <h3>LLM Evaluation &amp; Quality</h3>
+                <p>Structured rubrics, regression testing, and RLHF-aligned feedback for code correctness and safety.</p>
+                <div class="pillar-tag">Evaluation</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">02</div>
+              <div class="pillar-body">
+                <h3>Applied AI &amp; RAG</h3>
+                <p>Containerized RAG pipelines with hybrid dense/sparse vector search, cross-encoder re-ranking, and citation verification.</p>
+                <div class="pillar-tag">RAG · OCR</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">03</div>
+              <div class="pillar-body">
+                <h3>Production Engineering</h3>
+                <p>High-reliability C++/C# codebases, real-time edge computer vision, and industrial automation control drivers.</p>
+                <div class="pillar-tag">C++ · Systems</div>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">04</div>
+              <div class="pillar-body">
+                <h3>AI Infrastructure</h3>
+                <p>Docker containerization, FastAPI backends, CI/CD harnesses, and cost-optimized AWS/Azure migrations.</p>
+                <div class="pillar-tag">MLOps · Cloud</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FEATURED PROJECTS ═══ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">/02 — Featured Work</span>
+          <h2 class="section-title">Open-source AI systems in production</h2>
+          <p class="section-description">Every project is built from scratch and serves a distinct production engineering need.</p>
+        </div>
+
+        <!-- Private Codebase Notice -->
+        <div class="private-repo-notice" data-reveal>
+          <span class="notice-icon">🔒</span>
+          <span>
+            <strong>Private Codebase Notice:</strong> Due to proprietary enterprise software, non-disclosure agreements, and strict defense-client confidentiality (Lockheed Martin, Raytheon, Northrop Grumman), several repositories are hosted privately. Links redirect to my main GitHub profile. To request guest viewer access for evaluation, please <a href="contact.html">contact me directly</a>.
+          </span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Card 1 (Featured - Spans 2 Columns) -->
+          <article class="project-card project-featured" data-reveal>
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <div class="project-icon">⚡</div>
+              </div>
+              <span class="project-tag tag-amber">Primary · LLM Evaluation</span>
+            </div>
+            <h3 class="project-title">LLM-as-a-Judge Evaluation Harness</h3>
+            <p class="project-description">
+              Automated model quality evaluation pipeline auditing <strong>500+ daily outputs</strong>. Uses custom <strong>Groundedness, Faithfulness, and Instruction Adherence</strong> metrics integrated into CI/CD workflows with dashboard telemetry.
+            </p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <div class="project-stat-value">500+</div>
+                <div class="project-stat-label">Daily LLM outputs</div>
+              </div>
+              <div class="project-stat">
+                <div class="project-stat-value">3</div>
+                <div class="project-stat-label">Custom metrics</div>
+              </div>
+              <div class="project-stat">
+                <div class="project-stat-value">CI/CD</div>
+                <div class="project-stat-label">GitHub Actions</div>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>GitHub Actions</span>
+              <span>OpenAI API</span>
+              <span>JSON Schema</span>
+            </div>
+            <div style="display: flex; gap: 16px; margin-top: auto; flex-wrap: wrap;">
+              <a href="https://www.youtube.com/watch?v=YzLZ1tC7_L4" target="_blank" rel="noreferrer" class="project-link magnetic">
+                <span>Watch Video Demo</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="project-link magnetic" style="color: var(--text-secondary);">
+                <span>Request Access</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 (Standard - Spans 1 Column) -->
+          <article class="project-card" data-reveal>
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <div class="project-icon">◆</div>
+              </div>
+              <span class="project-tag tag-blue">Applied AI / RAG</span>
+            </div>
+            <h3 class="project-title">Production-Grade Grounded RAG</h3>
+            <p class="project-description">
+              Containerized RAG pipeline with hybrid vector search, cross-encoder re-ranking, and structured citation verification.
+            </p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <div class="project-stat-value">35%</div>
+                <div class="project-stat-label">Recall boost</div>
+              </div>
+              <div class="project-stat">
+                <div class="project-stat-value">98%</div>
+                <div class="project-stat-label">Hallucination cut</div>
+              </div>
+              <div class="project-stat">
+                <div class="project-stat-value">Docker</div>
+                <div class="project-stat-label">Deployment</div>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>Docker</span>
+              <span>Qdrant</span>
+            </div>
+            <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="project-link magnetic">
+              <span>Request Access</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 3 (Standard - Spans 1 Column) -->
+          <article class="project-card" data-reveal>
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">
+                <div class="project-icon">👁</div>
+              </div>
+              <span class="project-tag tag-purple">Gemini Hackathon Winner</span>
+            </div>
+            <h3 class="project-title">THIRD EYE: Unseen Revealed</h3>
+            <p class="project-description">
+              AI-powered security auditing and content origin detection system built for the Gemini 3 Pro Hackathon. Scans for web vulnerabilities and detects synthetic vs. human content origins.
+            </p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <div class="project-stat-value">45</div>
+                <div class="project-stat-label">Active Source Files</div>
+              </div>
+              <div class="project-stat">
+                <div class="project-stat-value">Gemini</div>
+                <div class="project-stat-label">Origin Detection</div>
+              </div>
+              <div class="project-stat">
+                <div class="project-stat-value">Recharts</div>
+                <div class="project-stat-label">Visual Audit</div>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>React 18</span>
+              <span>TypeScript</span>
+              <span>Gemini API</span>
+              <span>Glassmorphism</span>
+            </div>
+            <div style="display: flex; gap: 16px; margin-top: auto; flex-wrap: wrap;">
+              <a href="https://www.youtube.com/watch?v=veSYGxprbis" target="_blank" rel="noreferrer" class="project-link magnetic">
+                <span>Watch Video Demo</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+              <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="project-link magnetic" style="color: var(--text-secondary);">
+                <span>Request Access</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;" data-reveal>
+          <a href="projects.html" class="btn btn-primary magnetic">
+            <span>Explore all projects & case studies</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE SUMMARY ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">/03 — Career Arc</span>
+          <h2 class="section-title">Where I've applied my code</h2>
+          <p class="section-description">A systematic transition from industrial firmware to applied generative AI reliability.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-rail"></div>
+            <div class="timeline-marker">
+              <div class="timeline-dot current">
+                <span class="timeline-pulse"></span>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Apr 2024 — Present</span>
+                <span class="timeline-badge current-badge">Current</span>
+              </div>
+              <h3 class="timeline-role">RLHF Domain Expert &amp; AI Evaluator</h3>
+              <p class="timeline-company">Scale AI · Remote</p>
+              <p class="timeline-bullets" style="list-style: none; margin-top: 8px;">
+                Completed 300+ confidential evaluation tasks for Python, C++, and multi-turn reasoning outputs. Validated structural correctness, prompt alignment, and built local harness utilities to trace regressions.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-rail"></div>
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jan 2017 — Feb 2022</span>
+                <span class="timeline-tag">6+ years</span>
+                <span class="timeline-tag">Fortune 500 defense</span>
+              </div>
+              <h3 class="timeline-role">Senior Systems &amp; Algorithm Engineer</h3>
+              <p class="timeline-company">Jetec Corporation · California, USA</p>
+              <p class="timeline-bullets" style="list-style: none; margin-top: 8px;">
+                Maintained a 40K+ LOC C++/C# real-time automation control system for defense and aerospace contractors. Led hardware integrations and deployed computer vision inspection systems with zero critical field failures.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;" data-reveal>
+          <a href="experience.html" class="btn btn-ghost magnetic">
+            <span>View complete timeline & credentials</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card" data-reveal>
+          <div class="contact-deco" aria-hidden="true">
+            <div class="contact-ring contact-ring-1"></div>
+            <div class="contact-ring contact-ring-2"></div>
+            <div class="contact-ring contact-ring-3"></div>
+          </div>
+
+          <div class="contact-content">
+            <span class="section-eyebrow">/04 — Get in touch</span>
+            <h2 class="contact-title">Let's build reliable AI together.</h2>
+            <p class="contact-lead">
+              Actively interviewing for <strong>Applied AI Engineer, AI Evaluation Engineer, Forward Deployed AI Engineer, LLM Ops/MLOps</strong>, and <strong>AI Product Engineer</strong> roles. Open to remote, hybrid, or on-site global relocation.
+            </p>
+
+            <div class="contact-grid">
+              <a href="mailto:gajjarswetang@gmail.com" class="contact-item magnetic">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">gajjarswetang@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/gajjarswetang" target="_blank" rel="noreferrer" class="contact-item magnetic">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-label">LinkedIn</div>
+                  <div class="contact-value">linkedin.com/in/gajjarswetang</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/SGajjar24" target="_blank" rel="noreferrer" class="contact-item magnetic">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </div>
+                <div>
+                  <div class="contact-label">GitHub</div>
+                  <div class="contact-value">github.com/SGajjar24</div>
+                </div>
+              </a>
+
+              <a href="https://www.kaggle.com/swetanggajjar" target="_blank" rel="noreferrer" class="contact-item magnetic">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 0l-5.698 9.948L11.536 8.35V0H6.282v24h5.254V12.183l7.982 11.817H25l-9.155-12.871L24.502 0h-5.677z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Kaggle</div>
+                  <div class="contact-value">kaggle.com/swetanggajjar</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="contact-footer">
+              <p>Based in Ahmedabad, India · Open to global opportunities · Prior US H-1B Cap-Exempt status preserved · M.S. Cal State Fullerton</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Component -->
+  <footer id="global-footer"></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
