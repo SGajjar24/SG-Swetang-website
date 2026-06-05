@@ -1717,12 +1717,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: scale(1.05) rotate(3deg);
 }
 
+.hero-profile-crop {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--bg);
+  overflow: hidden;
+  position: relative;
+  background: #e5e5e5;
+}
+
 .hero-profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--bg);
+  transform: scale(1.08) translateY(3.5%);
+  transform-origin: center top;
 }
 
 /* Grayscale Logo Wall below hero */
