@@ -1512,8 +1512,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.08) translateY(3.5%);
-  transform-origin: center top;
+  transform: scale(1.16) translateY(3.5%);
 }
 
 /* Grayscale Logo Wall below hero */
@@ -2024,7 +2023,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-text-content .hero-actions { justify-content: center; }
   .hero-image-content { order: -1; }
   .hero-profile-wrap { width: 280px; height: 280px; }
-  .hero-profile-img { transform: none; }
+
   
   .bento-grid { grid-template-columns: 1fr; }
   .bento-card-large { grid-column: span 1; }
