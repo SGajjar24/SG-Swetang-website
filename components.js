@@ -92,11 +92,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');
   if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
+    const closeMenu = () => {
+      navLinks.classList.remove('open');
+      mobileToggle.classList.remove('open');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileToggle.setAttribute('aria-label', 'Open navigation');
+    };
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = navLinks.classList.toggle('open');
-      mobileToggle.classList.toggle('open'); // add open class to animate hamburger lines!
+      mobileToggle.classList.toggle('open');
       mobileToggle.setAttribute('aria-expanded', isOpen);
       mobileToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+
+    // Close on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeMenu();
+      }
     });
   }
 

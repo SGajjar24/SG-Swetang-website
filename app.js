@@ -12,14 +12,22 @@
   // ─── Scroll progress bar ───────────────────────────────────────────
   const scrollProgress = document.getElementById('scroll-progress');
   if (scrollProgress) {
+    let ticking = false;
     const updateProgress = () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-      scrollProgress.style.width = progress + '%';
+      const progress = docHeight > 0 ? window.scrollY / docHeight : 0;
+      scrollProgress.style.transform = `scaleX(${progress})`;
+      ticking = false;
+    };
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
     };
     updateProgress();
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    window.addEventListener('resize', updateProgress);
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick);
   }
 
 
@@ -28,6 +36,7 @@
   const counters = document.querySelectorAll('[data-counter]');
   const animateCounter = (el) => {
     const target = parseInt(el.dataset.counter, 10);
+    if (isNaN(target)) return;
     const suffix = el.dataset.suffix || '';
     const duration = 1600;
     const startTime = performance.now();
@@ -59,24 +68,7 @@
     counters.forEach((c) => counterObserver.observe(c));
   }
 
-  // Mobile nav and active section highlighting are now handled in components.js for multi-page support.
-
-  // ─── Magnetic buttons (subtle effect on desktop only) ───────────────
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    const magneticElements = document.querySelectorAll('.magnetic');
-    magneticElements.forEach((el) => {
-      el.addEventListener('mousemove', (e) => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        const strength = el.classList.contains('btn') ? 0.18 : 0.12;
-        el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = '';
-      });
-    });
-  }
+  // Mobile nav, active section highlighting, and magnetic buttons are handled in components.js.
 
   // ─── Scroll reveal (IntersectionObserver) ──────────────────────────
   const revealTargets = document.querySelectorAll('[data-reveal]');
@@ -94,6 +86,9 @@
       { rootMargin: '0px 0px -8% 0px', threshold: 0.05 }
     );
     revealTargets.forEach((el) => revealObserver.observe(el));
+  } else {
+    // Fallback: reveal all elements immediately when IO is unsupported
+    revealTargets.forEach((el) => el.classList.add('revealed'));
   }
 
   // ─── Subtle parallax on hero grid background ──────────────────────
@@ -137,7 +132,9 @@
 
     const startInterval = () => {
       clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 6000); // 6 seconds auto-play
+      if (slides.length > 1) {
+        slideInterval = setInterval(nextSlide, 6000); // 6 seconds auto-play
+      }
     };
 
     dots.forEach((dot, index) => {
